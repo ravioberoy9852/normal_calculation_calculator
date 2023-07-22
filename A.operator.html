@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <header>
+        <h1><b>Arithmetical operation</b></h1>
+    </header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function performOperations() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            var sum = num1 + num2;
+            var difference = num1 - num2;
+            var product = num1 * num2;
+            var quotient = num1 / num2;
+
+            document.getElementById("sum").innerHTML = "Sum: " + sum;
+            document.getElementById("difference").innerHTML = "Difference: " + difference;
+            document.getElementById("product").innerHTML = "Product: " + product;
+            document.getElementById("quotient").innerHTML = "Quotient: " + quotient;
+        }
+    </script>
+</head>
+<body>
+    <label for="num1">Number 1:</label>
+    <input type="text" id="num1"><br>
+    <label for="num2">Number 2:</label>
+    <input type="text" id="num2"><br>
+    <button onclick="performOperations()">Perform Operations</button>
+
+    <h2>Results:</h2>
+    <p id="sum"></p>
+    <p id="difference"></p>
+    <p id="product"></p>
+    <p id="quotient"></p>
+</body>
+</html>
